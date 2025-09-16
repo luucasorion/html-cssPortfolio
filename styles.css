@@ -24,7 +24,8 @@ body {
     gap: 10px; 
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
-    min-height: 100vh;
+    overflow-y: hidden;
+    height: 100vh;
 }
 
 a{
@@ -152,7 +153,10 @@ aside .headshot img {
 main {
     grid-area: main;
     padding: 20px;
+    height: 100%;
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 main::-webkit-scrollbar {
@@ -241,13 +245,12 @@ main::-webkit-scrollbar {
 }
 
 footer {
-    margin: 5px;
     grid-area: footer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    border: 2px dashed black;
+    border-top: 2px dashed black;
     background-color: var(--background-color);
     color: var(--text-color);
     font-size: 14px;
@@ -280,7 +283,17 @@ footer {
     }
 }
 
-@media screen and (max-width: 430px){
+@media screen and (max-height: 600px) {
+    body {
+        overflow-y: auto;
+        height: auto;
+    }
+    main {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 500px){
     body{
         overflow-y: auto;
         height: auto;
