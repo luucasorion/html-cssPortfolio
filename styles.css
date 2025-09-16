@@ -24,8 +24,8 @@ body {
     gap: 10px; 
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
+    min-height: 100vh;
     overflow-y: hidden;
-    height: 100vh;
 }
 
 a{
@@ -153,10 +153,9 @@ aside .headshot img {
 main {
     grid-area: main;
     padding: 20px;
-    height: 100%;
+    height: auto;
+    min-height: 0;
     overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
 main::-webkit-scrollbar {
