@@ -24,7 +24,7 @@ body {
     "aside  main"    /* O aside na col-1, o main na col-2 */
     "footer footer"; /* O footer ocupa as 2 colunas */
 
-    gap: 20px; 
+    gap: 10px; 
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
 }
